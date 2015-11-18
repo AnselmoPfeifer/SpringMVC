@@ -1,4 +1,4 @@
-package com.anselmopfeifer.model;
+package com.anselmopfeifer.entity;
 
 import java.io.Serializable;
 import java.util.List;

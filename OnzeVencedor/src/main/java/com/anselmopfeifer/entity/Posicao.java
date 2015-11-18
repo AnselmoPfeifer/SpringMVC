@@ -1,4 +1,4 @@
-package com.anselmopfeifer.model;
+package com.anselmopfeifer.entity;
 
 public enum Posicao {
 	Goleiro, 

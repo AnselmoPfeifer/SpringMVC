@@ -1,4 +1,4 @@
-package com.anselmopfeifer.repository;
+package com.anselmopfeifer.dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.anselmopfeifer.model.Clube;
+import com.anselmopfeifer.entity.Clube;
 
 @Repository("clubeDao")
 public class ClubeDAO {

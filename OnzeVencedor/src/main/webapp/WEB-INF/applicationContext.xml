@@ -10,9 +10,7 @@
 	<!-- Define o pacote onde o Spring vai procurar por beans anotados -->
 	<context:component-scan 
 		base-package="
-			com.anselmopfeifer.service,
-			com.anselmopfeifer.dao
-			com.anselmopfeifer.repository" />
+			com.anselmopfeifer.service,com.anselmopfeifer.dao" />
 
 	<!-- define que as transaçoes irao ser anotadas -->
 	<tx:annotation-driven /> 
