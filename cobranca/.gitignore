@@ -6,3 +6,4 @@ mvnw.cmd
 .project
 .classpath
 .settings
+.gitignore
