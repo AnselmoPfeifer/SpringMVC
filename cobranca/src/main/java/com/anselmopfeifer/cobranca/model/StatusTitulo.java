@@ -1,10 +1,12 @@
 package com.anselmopfeifer.cobranca.model;
+
 /**
  * Created by anselmo on 21/04/16.
  */
 public enum StatusTitulo {
     PENDENTE("Pendente"),
-    RECEBIDO("Recebido");
+    RECEBIDO("Recebido"),
+    CANCELADO("Cancelado");
 
     private String descricao;
 
@@ -16,4 +18,3 @@ public enum StatusTitulo {
         return descricao;
     }
 }
-

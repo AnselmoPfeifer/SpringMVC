@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CobrancaApplication {
 
 	public static void main(String[] args) {
-
-		System.setProperty("spring.devtools.livereload.enabled", "false");
 		SpringApplication.run(CobrancaApplication.class, args);
 	}
 }

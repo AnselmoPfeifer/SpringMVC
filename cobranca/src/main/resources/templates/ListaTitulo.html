@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<title>Cadastro de Títulos</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"> <img class="logo"
+					alt="Sistema de Cobrança" src="/images/logo.png" />
+				</a>
+			</div>
+		</div>
+	</nav>
+	<form class="form-horizontal" method="POST" action="/titulos">
+		<div class="alert alert-success fade in"
+			th:if="${!#strings.isEmpty(mensagem)}">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span th:text="${mensagem}"></span>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1 class="panel-title">Lista dos Titulos</h1>
+			</div>
+
+			<div class="panel-body">
+
+			</div>
+		</div>
+	</form>
+
+</body>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</html>
