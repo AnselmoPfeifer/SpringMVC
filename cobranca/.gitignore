@@ -1,9 +1,0 @@
-.idea/
-/target/
-.mvn
-mvnw
-mvnw.cmd
-.project
-.classpath
-.settings
-.gitignore
