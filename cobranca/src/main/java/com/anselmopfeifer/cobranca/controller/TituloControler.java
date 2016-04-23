@@ -31,12 +31,11 @@ public class TituloControler {
 		return mv;
     }
     
-//	@RequestMapping("/lista")
-//    public ModelAndView lista(){
-//		ModelAndView mv = new ModelAndView("ListaTitulo");
-//		return mv;
-//    }
-	
+    @RequestMapping
+    public String pesquisar(){
+    	return "PesquisaTitulo";
+    	
+    }
     @RequestMapping(method = RequestMethod.POST)
 	public ModelAndView salvar(Titulo titulo) {
 		titulos.save(titulo);
