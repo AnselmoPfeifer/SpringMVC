@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 <title>Cadastro de Títulos</title>
-<link rel="stylesheet" href="/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/style.css" />
 </head>
-<body>
-	<nav class="navbar navbar-inverse navbar-static-top">
-		<div class="container-">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#"> <img class="logo"
-					alt="Sistema de Cobrança" src="/images/logo.png" />
-				</a>
-			</div>
-		</div>
-	</nav>
+
+<section layout:fragment="conteudo">
 	<form class="form-horizontal" method="POST" action="/titulos">
 		<div class="alert alert-success fade in"
 			th:if="${!#strings.isEmpty(mensagem)}">
@@ -27,7 +16,10 @@
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h1 class="panel-title">Novo Titulo</h1>
+							<div class="clearfix">
+				<h1 class="panel-title titulo-painel">Novo Titulo</h1>
+				<a class="btn btn-primary btn-sm link-novo" href="/titulos">Voltar para Pesquisa</a>
+			</div>
 			</div>
 
 			<div class="panel-body">
@@ -69,8 +61,5 @@
 			</div>
 		</div>
 	</form>
-
-</body>
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+</section>
 </html>
