@@ -30,8 +30,8 @@
 	float: right;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .titulo-painel {
@@ -43,10 +43,14 @@
 	padding-right: 5px;
 	padding-top: 3px;
 	padding-bottom: 3px;
+	font-family:sans-serif;
+	font-size: 12px;
 }
 .glyphicon-pencil{
 	color: #00A8FB;
+	padding-right: 2px;
 }
 .glyphicon-remove{
 	color: #DF3A01;
+	padding-left: 2px;
 }
