@@ -5,3 +5,4 @@ Sistema de cobranças para condominio usando Spring MVC com Thymeleaf
 	LINKS:
 	https://github.com/ultraq/thymeleaf-layout-dialect
 	https://github.com/thymeleaf/thymeleaf-extras-eclipse-plugin
+	http://bootstrap-datepicker.readthedocs.io/en/latest/

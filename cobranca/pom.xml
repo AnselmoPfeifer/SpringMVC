@@ -9,8 +9,16 @@
 	<packaging>war</packaging>
 
 	<name>cobranca</name>
-	<description>Demo project for Spring Boot</description>
-
+	<description>Projeto web usando Spring MVC</description>
+	<url>http://anselmopfeifer.com/devops/spring-mvc/</url>
+	<contributors>
+	    <contributor>
+	      <name>Anslemo Pfeifer</name>
+	      <email>contato@anselmopfeifer.com</email>
+	      <organization>AnselmoPfeifer</organization>
+	      <organizationUrl>http://www.anselmopfeifer.com</organizationUrl>
+	   </contributor>
+	</contributors>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
