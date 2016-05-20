@@ -17,4 +17,19 @@ $('#confirmacaoExclusaoModal').on('show.bs.modal', function(event) {
 
 $(function() {
 	$('[rel="tooltip"]').tooltip();
+	$('.js-currency').maskMoney({decimal: ',', thousands: '.', allowZero: true});
+	
+	$('.js-atualizar-status').on('click', function(event){
+		event.preventDefault();
+		
+		var botaoRecber = $(event.currentTarget);
+		var urlReceber = botaoRecber.attr('href');
+		
+		var response = $.ajax({
+			url: urlReceber,
+			type: 'PUT'
+		});
+
+	});
 });
+

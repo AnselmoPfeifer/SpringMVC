@@ -13,7 +13,7 @@
 		<div class="panel-heading">
 			<div class="clearfix">
 				<h1 class="panel-title titulo-painel">Lista dos Titulos</h1>
-				<a class="btn btn-info btn-xs link-novo" href="/titulos/novo">Cadastrar
+				<a class="btn btn-primary btn-xs link-novo" href="/titulos/novo">Cadastrar
 					novo título</a>
 			</div>
 		</div>
@@ -61,6 +61,11 @@
 	   								th:attr="data-codigo=${titulo.codigo}, data-descricao=${titulo.descricao}" 
 	   								title="Excluir" rel="tooltip" data-placement="top"> 
 	   							<span class="glyphicon glyphicon-remove"></span>
+	   						</a>
+	   						<a class="btn btn-link btn-xs js-atualizar-status" th:if="${titulo.pendente}"
+	   							title="Receber" rel="tooltip" data-placement="top"
+	   							th:href="@{/titulos/{codigo}/receber(codigo=${titulo.codigo})}"> 
+	   							<span class="glyphicon glyphicon-check"></span>
 	   						</a>
 						</td>
 					</tr>
