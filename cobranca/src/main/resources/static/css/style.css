@@ -1,3 +1,16 @@
+/*Desktop*/
+@media (min-width: 768px){
+	.panel-default {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.alert {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
 .navbar {
 	background-color: #00A8FB;
 }
@@ -14,16 +27,6 @@
 
 .logo {
 	height: 55px;
-}
-
-.alert {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.panel-default {
-	margin-left: 10px;
-	margin-right: 10px;
 }
 
 .link-novo {
