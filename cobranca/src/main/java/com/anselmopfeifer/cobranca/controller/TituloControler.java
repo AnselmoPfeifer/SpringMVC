@@ -3,8 +3,6 @@ package com.anselmopfeifer.cobranca.controller;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.ws.rs.Path;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -20,6 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.anselmopfeifer.cobranca.model.StatusTitulo;
 import com.anselmopfeifer.cobranca.model.Titulo;
 import com.anselmopfeifer.cobranca.repository.Titulos;
+import com.anselmopfeifer.cobranca.repository.filter.TituloFiler;
 import com.anselmopfeifer.cobranca.service.CadastroTituloService;
 
 /**
@@ -29,10 +28,7 @@ import com.anselmopfeifer.cobranca.service.CadastroTituloService;
 @RequestMapping("/titulos")
 public class TituloControler {
 	private static final String CADASTRO_VIEW = "CadastroTitulo";
-	
-	@Autowired
-	private Titulos titulos;
-	
+
 	@Autowired
 	private CadastroTituloService cadastroTituloService;
 
@@ -48,11 +44,11 @@ public class TituloControler {
 		if (errors.hasErrors()) {
 			return CADASTRO_VIEW;
 		}
-		
+
 		try {
 			cadastroTituloService.salvar(titulo);
 			attributes.addFlashAttribute("mensagem", "Título salvo com sucesso!");
-			return "redirect:/titulos/"; 
+			return "redirect:/titulos/";
 		} catch (IllegalArgumentException e) {
 			errors.rejectValue("dataVencimento", null, e.getMessage());
 			return CADASTRO_VIEW;
@@ -60,32 +56,31 @@ public class TituloControler {
 	}
 
 	@RequestMapping
-	public ModelAndView pesquisar() {
-		List<Titulo> todosTitulos = titulos.findAll();
+	public ModelAndView pesquisar(@ModelAttribute("filtro") TituloFiler filtro) {
+		List<Titulos> todosTitulos = cadastroTituloService.filtrar(filtro);
 		ModelAndView mv = new ModelAndView("PesquisaTitulos");
 		mv.addObject("titulos", todosTitulos);
 		return mv;
 	}
-	
+
 	@RequestMapping("{codigo}")
 	public ModelAndView edicao(@PathVariable("codigo") Titulo titulo) {
-		ModelAndView mv = new ModelAndView(CADASTRO_VIEW); 
+		ModelAndView mv = new ModelAndView(CADASTRO_VIEW);
 		mv.addObject(titulo);
 		return mv;
 	}
-	
-	@RequestMapping(value="{codigo}", method = RequestMethod.DELETE)
+
+	@RequestMapping(value = "{codigo}", method = RequestMethod.DELETE)
 	public String excluir(@PathVariable Long codigo, RedirectAttributes attributes) {
 		cadastroTituloService.excluir(codigo);
-		
+
 		attributes.addFlashAttribute("mensagem", "Título excluído com sucesso!");
 		return "redirect:/titulos";
 	}
 
-	@RequestMapping(value="/{codigo}/receber", method = RequestMethod.PUT)
-	public @ResponseBody String receber(@PathVariable Long codigo){
-		System.out.println(">>> " + codigo);
-		return "Ok";
+	@RequestMapping(value = "/{codigo}/receber", method = RequestMethod.PUT)
+	public @ResponseBody String receber(@PathVariable Long codigo) {
+		return cadastroTituloService.receber(codigo);
 	}
 
 	@ModelAttribute("todosStatusTitulo")

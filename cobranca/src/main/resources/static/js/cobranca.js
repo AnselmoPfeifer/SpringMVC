@@ -1,3 +1,4 @@
+
 $('#confirmacaoExclusaoModal').on('show.bs.modal', function(event) {
 	var button = $(event.relatedTarget);
 	
@@ -19,17 +20,29 @@ $(function() {
 	$('[rel="tooltip"]').tooltip();
 	$('.js-currency').maskMoney({decimal: ',', thousands: '.', allowZero: true});
 	
-	$('.js-atualizar-status').on('click', function(event){
+	$('.js-atualizar-status').on('click', function(event) {
 		event.preventDefault();
 		
-		var botaoRecber = $(event.currentTarget);
-		var urlReceber = botaoRecber.attr('href');
+		var botaoReceber = $(event.currentTarget);
+		var urlReceber = botaoReceber.attr('href');
 		
 		var response = $.ajax({
 			url: urlReceber,
 			type: 'PUT'
 		});
-
+		
+		
+		response.done(function(e) {
+			var codigoTitulo = botaoReceber.data('codigo');
+			$('[data-role=' + codigoTitulo + ']').html('<span class="label label-success">' + e + '</span>');
+			console.log(e);
+			botaoReceber.hide();
+		});
+		
+		response.fail(function(e) {
+			console.log(e);
+			alert('Erro recebendo cobrança');
+		});
+		
 	});
 });
-

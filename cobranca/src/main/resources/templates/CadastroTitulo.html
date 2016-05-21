@@ -7,7 +7,7 @@
 <title>Cadastro de Títulos</title>
 </head>
 <section layout:fragment="conteudo">
-	<form class="form-horizontal" method="POST" action="/titulos" th:object="${titulo}">
+	<form class="form-horizontal" method="POST" th:action="@{/titulos}" th:object="${titulo}">
 	<input type="hidden" th:field="*{codigo}"/>
 		<div layout:include="MensagemGeral"></div>
 		<div layout:include="MensagemErro"></div>
@@ -16,7 +16,7 @@
 			<div class="panel-heading">
 							<div class="clearfix">
 				<h1 class="panel-title titulo-painel">Novo Titulo</h1>
-				<a class="btn btn-primary btn-sm link-novo" href="/titulos">Voltar para Pesquisa</a>
+				<a class="btn btn-primary btn-sm link-novo" th:href="@{/titulos}">Voltar para Pesquisa</a>
 			</div>
 			</div>
 
