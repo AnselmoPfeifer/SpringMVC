@@ -20,108 +20,98 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
-
-/**
- * Created by anselmo on 21/04/16.
- */
 @Entity
 public class Titulo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long codigo;
-    
-    @NotEmpty(message = "Descrição é Obrigatoria!")
-    @Size(max = 100, message = "A descrição nao pode conter mais de 100 caracteres.")
-    private String descricao;
-    
-    @NotNull(message = "Data de vencimento é Obrigatoria!")
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    @Temporal(TemporalType.DATE)
-    private Date dataVencimento;
-    
-    @NotNull( message = "Valor não pode ser nulo")
-    @DecimalMin(value = "0.01", message = "Valor não pode ser menor que 0,01")
-    @DecimalMax(value = "9999999.99", message = "O valor não pode ser maior que 9.999.999,99")
-    @NumberFormat(pattern = "#,##0.00")
-    private BigDecimal valor;
 
-    @Enumerated(EnumType.STRING)
-    private StatusTitulo status;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long codigo;
 
-    public Long getCodigo() {
-        return codigo;
-    }
+	@NotEmpty(message = "Descrição é obrigatória")
+	@Size(max = 60, message = "A descrição não pode conter mais de 60 caracteres")
+	private String descricao;
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
-    }
+	@NotNull(message = "Date de vencimento é obrigatória")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
+	private Date dataVencimento;
 
-    public String getDescricao() {
-        return descricao;
-    }
+	@NotNull(message = "Valor é obrigatório")
+	@DecimalMin(value = "0.01", message = "Valor não pode ser menor que 0,01")
+	@DecimalMax(value = "9999999.99", message = "Valor não pode ser maior que 9.999.999,99")
+	@NumberFormat(pattern = "#,##0.00")
+	private BigDecimal valor;
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+	@Enumerated(EnumType.STRING)
+	private StatusTitulo status;
 
-    public Date getDataVencimento() {
-        return dataVencimento;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public void setDataVencimento(Date dataVencimento) {
-        this.dataVencimento = dataVencimento;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public BigDecimal getValor() {
-        return valor;
-    }
+	public String getDescricao() {
+		return descricao;
+	}
 
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
-    }
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 
-    public StatusTitulo getStatus() {
-        return status;
-    }
+	public Date getDataVencimento() {
+		return dataVencimento;
+	}
 
-    public void setStatus(StatusTitulo status) {
-        this.status = status;
-    }
-    
-    public boolean isPendente(){
-    	return StatusTitulo.PENDENTE.equals(this.status);
-    }
-    
-    public boolean isCancelado(){
-    	return StatusTitulo.CANCELADO.equals(this.status);
-    }
-    
-    public boolean isRecebido(){
-    	return StatusTitulo.RECEBIDO.equals(this.status);
-    }
-    
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-        return result;
-    }
+	public void setDataVencimento(Date dataVencimento) {
+		this.dataVencimento = dataVencimento;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Titulo other = (Titulo) obj;
-        if (codigo == null) {
-            if (other.codigo != null)
-                return false;
-        } else if (!codigo.equals(other.codigo))
-            return false;
-        return true;
-    }
+	public BigDecimal getValor() {
+		return valor;
+	}
+
+	public void setValor(BigDecimal valor) {
+		this.valor = valor;
+	}
+
+	public StatusTitulo getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusTitulo status) {
+		this.status = status;
+	}
+
+	public boolean isPendente() {
+		return StatusTitulo.PENDENTE.equals(this.status);
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Titulo other = (Titulo) obj;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		return true;
+	}
+
 }

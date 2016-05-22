@@ -9,21 +9,20 @@ import org.springframework.stereotype.Service;
 import com.anselmopfeifer.cobranca.model.StatusTitulo;
 import com.anselmopfeifer.cobranca.model.Titulo;
 import com.anselmopfeifer.cobranca.repository.Titulos;
-import com.anselmopfeifer.cobranca.repository.filter.TituloFiler;
+import com.anselmopfeifer.cobranca.repository.filter.TituloFilter;
 
 @Service
 public class CadastroTituloService {
-	
+
 	@Autowired
 	private Titulos titulos;
-
+	
 	public void salvar(Titulo titulo) {
 		try {
 			titulos.save(titulo);
 		} catch (DataIntegrityViolationException e) {
-			throw new IllegalArgumentException("Formato da data inválido");
+			throw new IllegalArgumentException("Formato de data inválido");
 		}
-
 	}
 
 	public void excluir(Long codigo) {
@@ -36,10 +35,9 @@ public class CadastroTituloService {
 		titulos.save(titulo);
 		
 		return StatusTitulo.RECEBIDO.getDescricao();
-		
 	}
 	
-	public List<Titulos> filtrar (TituloFiler filtro){
+	public List<Titulo> filtrar(TituloFilter filtro) {
 		String descricao = filtro.getDescricao() == null ? "%" : filtro.getDescricao();
 		return titulos.findByDescricaoContaining(descricao);
 	}

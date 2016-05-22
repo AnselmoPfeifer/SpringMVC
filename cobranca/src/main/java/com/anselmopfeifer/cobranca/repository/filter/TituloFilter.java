@@ -1,6 +1,7 @@
 package com.anselmopfeifer.cobranca.repository.filter;
 
-public class TituloFiler {
+public class TituloFilter {
+
 	private String descricao;
 
 	public String getDescricao() {
