@@ -8,7 +8,7 @@ Sistema de cobranças para condominio usando Spring MVC com Thymeleaf
 		http://www.anselmopfeifer.com/wp-content/uploads/2016/05/02.png
 		
 	
-	Usando o layout das paginas com thymeleaf-layout	
+	Layout das paginas com thymeleaf-layout	
 	thymeleaf-layout-dialect
 		github.com/ultraq/thymeleaf-layout-dialect
 	thymeleaf-extras-eclipse-plugin
