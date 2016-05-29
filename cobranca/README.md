@@ -5,10 +5,8 @@ Telas do sistema
 [Tela de cadastro](http://www.anselmopfeifer.com/wp-content/uploads/2016/05/02.png)
 		
 	
-	Layout das paginas com thymeleaf-layout	
-	thymeleaf-layout-dialect
-		github.com/ultraq/thymeleaf-layout-dialect
-	thymeleaf-extras-eclipse-plugin
-		github.com/thymeleaf/thymeleaf-extras-eclipse-plugin
-	datepicker
-		bootstrap-datepicker.readthedocs.io/en/latest
+Layout das paginas com thymeleaf-layout	
+[thymeleaf-layout-dialect](github.com/ultraq/thymeleaf-layout-dialect)
+		
+[thymeleaf-extras-eclipse-plugin](github.com/thymeleaf/thymeleaf-extras-eclipse-plugin)
+[datepicker](bootstrap-datepicker.readthedocs.io/en/latest)
