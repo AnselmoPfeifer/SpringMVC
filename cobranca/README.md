@@ -1,4 +1,4 @@
-#Sistema de cobranças para condominio usando Spring MVC com Thymeleaf
+# Cobranças de itens com Spring MVC
 	
 Telas do sistema
 [Lista de titulos](http://www.anselmopfeifer.com/wp-content/uploads/2016/05/01.png)
