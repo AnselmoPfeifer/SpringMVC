@@ -6,7 +6,8 @@ Telas do sistema
 		
 	
 Layout das paginas com thymeleaf-layout	
-[thymeleaf-layout-dialect](github.com/ultraq/thymeleaf-layout-dialect)
+[Thymeleaf-layout-dialect](github.com/ultraq/thymeleaf-layout-dialect)
 		
-[thymeleaf-extras-eclipse-plugin](github.com/thymeleaf/thymeleaf-extras-eclipse-plugin)
-[datepicker](bootstrap-datepicker.readthedocs.io/en/latest)
+[Thymeleaf-extras-eclipse-plugin](github.com/thymeleaf/thymeleaf-extras-eclipse-plugin)
+
+[Datepicker](bootstrap-datepicker.readthedocs.io/en/latest)
