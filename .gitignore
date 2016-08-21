@@ -5,4 +5,7 @@
 .recommenders/
 Servers/
 RemoteSystemsTempFiles/
-
+cobranca/.classpath
+cobranca/.gitignore
+cobranca/.project
+cobranca/.settings/
