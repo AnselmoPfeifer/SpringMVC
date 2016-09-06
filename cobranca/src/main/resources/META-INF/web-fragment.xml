@@ -5,4 +5,9 @@
 	version="3.0" metadata-complete="true">
 	<name>spring_web</name>
 	<distributable/>
+	
+	<listener>
+	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+</listener>
+
 </web-fragment>

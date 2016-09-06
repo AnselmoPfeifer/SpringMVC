@@ -1,0 +1,25 @@
+{
+  "name": "Spring Boot Spring Security",
+  "description": "GroupAccessControl - This tag demonstrates restricting access by Stormpath Group membership.",
+  "repository": "https://github.com/stormpath/spring-boot-spring-security-tutorial/tree/04-GroupAccessControl",
+  "keywords": ["spring boot", "identity", "security", "authentication"],
+  "success_url": "/",
+  "env": {
+    "STORMPATH_API_KEY_ID": {
+      "description": "The API key ID from your ~/.stormpath/apiKey.properties file",
+      "value": "1IH90N4BMV8DEJEGBCDQF3RNV"
+    },
+    "STORMPATH_API_KEY_SECRET": {
+      "description": "The API key secret from tyou ~/.stormpath/apiKey.properties file",
+      "value": "UqnWol+RaMaDUcsr5WnImGEVepYd31AjNsU4vIaUnJA"
+    },
+    "STORMPATH_APPLICATION_HREF": {
+      "description": "The URL for your Stormpath Application from the Stormpath Admin Dashboard",
+      "value": "https://api.stormpath.com/v1/applications/627i4kvtQHaGvnWWJ0inf6"
+    },
+    "STORMPATH_AUTHORIZED_GROUP_ADMIN": {
+      "description": "The URL for your Stormpath Group from the Stormpath Admin Dashboard",
+      "value": "ADMIN"
+    }
+  }
+}

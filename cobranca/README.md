@@ -4,7 +4,7 @@ Telas do sistema
 [Lista de titulos](http://www.anselmopfeifer.com/wp-content/uploads/2016/05/01.png), 
 [Tela de cadastro](http://www.anselmopfeifer.com/wp-content/uploads/2016/05/02.png)
 		
-	
+	mvn spring-boot:run
 	
 Layout das paginas com thymeleaf
 
