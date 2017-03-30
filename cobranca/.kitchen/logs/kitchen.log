@@ -1,0 +1,26 @@
+E, [2016-09-06T19:49:06.270245 #10844] ERROR -- Kitchen: ------Exception-------
+E, [2016-09-06T19:49:06.272643 #10844] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2016-09-06T19:49:06.272722 #10844] ERROR -- Kitchen: Message: Kitchen YAML file /Users/anselmo/Documents/Desenvolvimento/workspace/JAVA/Spring/mvc-com-spring/cobranca/.kitchen.yml does not exist.
+E, [2016-09-06T19:49:06.272775 #10844] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-09-06T19:49:06.272816 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/loader/yaml.rb:74:in `read'
+E, [2016-09-06T19:49:06.272857 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/config.rb:149:in `data'
+E, [2016-09-06T19:49:06.272898 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/config.rb:128:in `suites'
+E, [2016-09-06T19:49:06.272938 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/config.rb:179:in `filter_instances'
+E, [2016-09-06T19:49:06.273017 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/config.rb:138:in `build_instances'
+E, [2016-09-06T19:49:06.273056 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/config.rb:114:in `instances'
+E, [2016-09-06T19:49:06.273095 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/command.rb:115:in `filtered_instances'
+E, [2016-09-06T19:49:06.273135 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/command.rb:145:in `parse_subcommand'
+E, [2016-09-06T19:49:06.273175 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/command/login.rb:32:in `call'
+E, [2016-09-06T19:49:06.273213 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-09-06T19:49:06.274892 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/cli.rb:234:in `login'
+E, [2016-09-06T19:49:06.274975 #10844] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-09-06T19:49:06.275028 #10844] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-09-06T19:49:06.275071 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/cli.rb:321:in `invoke_task'
+E, [2016-09-06T19:49:06.275113 #10844] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-09-06T19:49:06.275155 #10844] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-09-06T19:49:06.275195 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-09-06T19:49:06.275234 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/lib/kitchen/errors.rb:154:in `with_friendly_errors'
+E, [2016-09-06T19:49:06.275313 #10844] ERROR -- Kitchen: /Users/anselmo/.chefdk/gem/ruby/2.1.0/gems/test-kitchen-1.6.0/bin/kitchen:13:in `<top (required)>'
+E, [2016-09-06T19:49:06.275349 #10844] ERROR -- Kitchen: /opt/chefdk/embedded/bin/kitchen:22:in `load'
+E, [2016-09-06T19:49:06.275385 #10844] ERROR -- Kitchen: /opt/chefdk/embedded/bin/kitchen:22:in `<main>'
+E, [2016-09-06T19:49:06.275419 #10844] ERROR -- Kitchen: ----------------------
